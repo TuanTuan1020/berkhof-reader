@@ -1,0 +1,55 @@
+name: iPhone reader build
+on:
+  push:
+    branches: [ios-reader]
+    paths: [ios/**, .github/workflows/ios-build.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build iPhone package
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          xcodebuild -project ios/BerkhofReader.xcodeproj -scheme BerkhofReader \
+            -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/ios-build" CODE_SIGNING_ALLOWED=NO build
+          mkdir -p "$RUNNER_TEMP/ios-package/Payload" "$RUNNER_TEMP/outputs"
+          product="$RUNNER_TEMP/ios-build/Build/Products/Release-iphoneos/BerkhofReader.app"
+          cmp ios/BerkhofReader/Book.html "$product/Book.html"
+          file "$product/BerkhofReader"
+          cp -R "$product" "$RUNNER_TEMP/ios-package/Payload/"
+          cd "$RUNNER_TEMP/ios-package"
+          zip -qry "$RUNNER_TEMP/outputs/BerkhofReader-unsigned.ipa" Payload
+      - name: Upload the unsigned package
+        uses: actions/upload-artifact@v4
+        with:
+          name: iphone-unsigned
+          path: ${{ runner.temp }}/outputs/BerkhofReader-unsigned.ipa
+      - name: Launch on an iPhone simulator
+        shell: bash
+        run: |
+          set -euo pipefail
+          device="$(xcrun simctl list devices available --json | python3 -c 'import json,sys; d=json.load(sys.stdin)["devices"]; print(next(x["udid"] for key in reversed(sorted(d)) for x in d[key] if x["name"].startswith("iPhone")))')"
+          xcrun simctl boot "$device"
+          xcodebuild -project ios/BerkhofReader.xcodeproj -scheme BerkhofReader \
+            -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/sim-build" CODE_SIGNING_ALLOWED=NO build
+          product="$RUNNER_TEMP/sim-build/Build/Products/Debug-iphonesimulator/BerkhofReader.app"
+          codesign --force --sign - "$product"
+          xcrun simctl bootstatus "$device" -b
+          xcrun simctl status_bar "$device" override --time '9:41' --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState unplugged --batteryLevel 100
+          xcrun simctl install "$device" "$product"
+          xcrun simctl launch "$device" cn.tuantuan.berkhof.reader
+          sleep 5
+          xcrun simctl io "$device" screenshot "$RUNNER_TEMP/outputs/iphone-home.png"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: iphone-preview
+          path: ${{ runner.temp }}/outputs/iphone-home.png

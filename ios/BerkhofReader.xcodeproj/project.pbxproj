@@ -1,0 +1,32 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 56;
+    objects = {
+        300000000000000000000001 = {isa = PBXProject; attributes = {LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600;}; buildConfigurationList = 300000000000000000000007; compatibilityVersion = "Xcode 14.0"; developmentRegion = "zh-Hans"; hasScannedForEncodings = 0; knownRegions = ("zh-Hans", Base); mainGroup = 300000000000000000000002; productRefGroup = 300000000000000000000004; projectDirPath = ""; projectRoot = ""; targets = (300000000000000000000005); };
+        300000000000000000000002 = {isa = PBXGroup; children = (300000000000000000000003, 300000000000000000000004); sourceTree = "<group>"; };
+        300000000000000000000003 = {isa = PBXGroup; children = (300000000000000000000011, 300000000000000000000012, 300000000000000000000013, 300000000000000000000014); path = BerkhofReader; sourceTree = "<group>"; };
+        300000000000000000000004 = {isa = PBXGroup; children = (300000000000000000000006); name = Products; sourceTree = "<group>"; };
+        300000000000000000000005 = {isa = PBXNativeTarget; buildConfigurationList = 300000000000000000000008; buildPhases = (300000000000000000000021, 300000000000000000000022, 300000000000000000000023); buildRules = (); dependencies = (); name = BerkhofReader; productName = BerkhofReader; productReference = 300000000000000000000006; productType = "com.apple.product-type.application"; };
+        300000000000000000000006 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerkhofReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        300000000000000000000007 = {isa = XCConfigurationList; buildConfigurations = (300000000000000000000031, 300000000000000000000032); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+        300000000000000000000008 = {isa = XCConfigurationList; buildConfigurations = (300000000000000000000033, 300000000000000000000034); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+        300000000000000000000011 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+        300000000000000000000012 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
+        300000000000000000000013 = {isa = PBXFileReference; lastKnownFileType = text.html; path = Book.html; sourceTree = "<group>"; };
+        300000000000000000000014 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+        300000000000000000000015 = {isa = PBXBuildFile; fileRef = 300000000000000000000011; };
+        300000000000000000000016 = {isa = PBXBuildFile; fileRef = 300000000000000000000012; };
+        300000000000000000000017 = {isa = PBXBuildFile; fileRef = 300000000000000000000013; };
+        300000000000000000000018 = {isa = PBXBuildFile; fileRef = 300000000000000000000014; };
+        300000000000000000000021 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (300000000000000000000015, 300000000000000000000016); runOnlyForDeploymentPostprocessing = 0; };
+        300000000000000000000022 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+        300000000000000000000023 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (300000000000000000000017, 300000000000000000000018); runOnlyForDeploymentPostprocessing = 0; };
+        300000000000000000000031 = {isa = XCBuildConfiguration; buildSettings = {SDKROOT = iphoneos; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 15.0;}; name = Debug; };
+        300000000000000000000032 = {isa = XCBuildConfiguration; buildSettings = {SDKROOT = iphoneos; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 15.0;}; name = Release; };
+        300000000000000000000033 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "神学概论"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES; INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"; INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"; MARKETING_VERSION = 1.0.0; PRODUCT_BUNDLE_IDENTIFIER = cn.tuantuan.berkhof.reader; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = "1,2";}; name = Debug; };
+        300000000000000000000034 = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "神学概论"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES; INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"; INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"; MARKETING_VERSION = 1.0.0; PRODUCT_BUNDLE_IDENTIFIER = cn.tuantuan.berkhof.reader; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = "1,2";}; name = Release; };
+    };
+    rootObject = 300000000000000000000001;
+}
