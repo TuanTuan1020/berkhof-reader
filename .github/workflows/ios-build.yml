@@ -44,7 +44,6 @@ jobs:
           product="$RUNNER_TEMP/sim-build/Build/Products/Debug-iphonesimulator/BerkhofReader.app"
           codesign --force --sign - "$product"
           xcrun simctl bootstatus "$device" -b
-          xcrun simctl status_bar "$device" override --time '9:41' --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState unplugged --batteryLevel 100
           xcrun simctl install "$device" "$product"
           xcrun simctl launch "$device" cn.tuantuan.berkhof.reader
           sleep 5
