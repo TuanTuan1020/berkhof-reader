@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>基督教神学概论 · 全书朗读</title>
+    <link>https://tuantuan1020.github.io/berkhof-reader/podcast/</link>
+    <description>伯克富《基督教神学概论》，赵中辉译。按原书章节朗读，保留出版说明、作者序和复习问题。经文缩写在音频中读作书卷全名。普通话旁白由 HeyGen 国良声音合成。</description>
+    <language>zh-cn</language>
+    <copyright>伯克富 著，赵中辉 译</copyright>
+    <atom:link href="https://tuantuan1020.github.io/berkhof-reader/podcast/feed.xml" rel="self" type="application/rss+xml" />
+    <itunes:type>serial</itunes:type>
+    <itunes:author>伯克富著 · 赵中辉译</itunes:author>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="https://tuantuan1020.github.io/berkhof-reader/podcast/cover.jpg" />
+    <image>
+      <url>https://tuantuan1020.github.io/berkhof-reader/podcast/cover.jpg</url>
+      <title>基督教神学概论 · 全书朗读</title>
+      <link>https://tuantuan1020.github.io/berkhof-reader/podcast/</link>
+    </image>
+    <itunes:category text="Religion &amp; Spirituality">
+      <itunes:category text="Christianity" />
+    </itunes:category>
+    <lastBuildDate>Mon, 23 Nov 2026 15:27:02 GMT</lastBuildDate>
+    <item>
+      <title>出版说明</title>
+      <link>https://tuantuan1020.github.io/berkhof-reader/podcast/#episode-01</link>
+      <guid>https://tuantuan1020.github.io/berkhof-reader/podcast/#episode-01</guid>
+      <pubDate>Mon, 23 Nov 2026 15:27:02 GMT</pubDate>
+      <description>迫切出版《基督教神学概论》和《基督教教义史》的原因，是目前中国教会神学极为混乱，多少传道人在讲台上传讲错误及异端的道理，却大颜不惭地说为主传道；两千年来有多少为主的道至死忠心、为真道竭力争辩的人，他们曾在历史…</description>
+      <enclosure url="https://tuantuan1020.github.io/berkhof-reader/podcast/audio/episode-01.m4a" length="879583" type="audio/mp4" />
+      <itunes:duration>00:02:19</itunes:duration>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>原著者序</title>
+      <link>https://tuantuan1020.github.io/berkhof-reader/podcast/#episode-02</link>
+      <guid>https://tuantuan1020.github.io/berkhof-reader/podcast/#episode-02</guid>
+      <pubDate>Mon, 23 Nov 2026 15:27:02 GMT</pubDate>
+      <description>在出版拙著《系统神学》之后，发行者就要求著者编写一本更为简明、适合高中及大学程度的基督教要道概论，同时也能有益于一般年龄比较高的慕道友。想到教会中青年应受教义薰陶的重要性，我便义不容辞答应下来，遂着手编著此要…</description>
+      <enclosure url="https://tuantuan1020.github.io/berkhof-reader/podcast/audio/episode-02.m4a" length="534071" type="audio/mp4" />
+      <itunes:duration>00:01:24</itunes:duration>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
